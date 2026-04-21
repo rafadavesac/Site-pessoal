@@ -1,0 +1,418 @@
+/* CORES E FONTE */
+      :root {
+        --cor-vinho: #3d0b2b; /* fundo escuro principal */
+        --cor-vinho-claro: #5a1040; /* hover, destaque */
+        --cor-fundo: #f0eae8; /* fundo das seções claras */
+        --cor-texto: #1a1a1a; /* texto principal */
+        --cor-branco: #ffffff;
+        --fonte-titulo: "Syne", sans-serif;
+        --fonte-corpo: "DM Sans", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /*faz borders e paddings serem incluidos na height e witdh, isso previne 'spills'  e quebras de layout*/
+      }
+
+      body {
+        font-family: var(--fonte-corpo);
+        color: var(--cor-texto);
+        background-color: var(--cor-fundo);
+      }
+
+      /* NAVBAR */
+      /*flexbox*/
+      nav {
+        background-color: var(--cor-vinho);
+        padding: 16px 48px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav .logo {
+        color: var(--cor-branco);
+        font-family: var(--fonte-titulo);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      nav a {
+        color: var(--cor-branco);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: opacity 0.2s;
+        margin-left: 20px;
+        padding: 5px 10px 5px 10px;
+
+      }
+
+      nav a:hover {
+        border-radius: 8px;
+        background-color: var(--cor-vinho-claro);
+       
+        transition: background-color 0.2s; /*deixa a transição mais smooth*/
+      }
+
+      @media (max-width: 570px) {
+        nav{
+          justify-content: space-around;
+        }
+        nav a{
+          margin-left: 2px;
+          padding: 5px 5px;
+        }
+      }
+
+      /* HERO  */
+      /*flexbox p deixar texto e foto lado a lado*/
+      .hero {
+        background-color: var(--cor-vinho);
+        padding: 80px 48px;
+
+        display: flex;
+        align-items: center;
+      }
+
+      
+
+      .hero-texto h1 {
+        font-family: var(--fonte-titulo);
+        font-size: 3rem;
+        color: var(--cor-branco);
+        line-height: 1.1;
+      }
+
+      .hero-texto p {
+        display: flex;
+        color: var(--cor-branco);
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-top: 16px;
+      }
+
+      .hero-sociais {
+        display: flex;
+        gap: 16px;
+        margin-top: 32px;
+      }
+
+     .hero-sociais a {
+        color: var(--cor-branco);
+        font-size: 1.8rem;
+        border-radius: 8px;
+        padding: 8px 10px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+      }
+
+      .hero-sociais a:hover {
+        background-color: var(--cor-vinho-claro);
+      }
+
+
+      /*SEÇÕES GERAIS*/
+      section {
+        padding: 72px 48px;
+      }
+
+      .titulo-secao {
+        font-family: var(--fonte-titulo);
+        font-size: 2rem;
+        color: var(--cor-vinho);
+        margin-bottom: 32px;
+      }
+
+      /* SOBRE e FOTO */
+      
+
+      .sobre {
+        padding: 0; /* o padding já está no container pai */
+        flex: 1; /* ocupa o espaço restante */
+      }
+
+      .sobre p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* Foto dentro da seção sobre */
+      .sobre-foto {
+        flex-shrink: 0; /* não encolhe */
+      }
+
+      .sobre-foto img {
+        width: 220px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+
+      .sobre-foto-container {
+        display: flex;
+        align-items: center;
+        gap: 48px; /* espaço entre texto e foto */
+        padding: 72px 48px;
+      }
+
+      /* HABILIDADES e FORMAÇÃO (lado a lado)*/
+      .habilidades-formacao-container {
+        display: flex;
+        align-items: stretch; /* as duas colunas ficam com a mesma altura */
+      }
+
+      /* Coluna esquerda - habilidades */
+      .habilidades {
+        flex: 1; /*diminui e cresce se precisar*/
+        padding: 72px 48px;
+        background-color: var(--cor-fundo);
+      }
+
+      /* Dentro de habilidades: linguagens e idiomas lado a lado */
+      .habilidades-colunas {
+        display: flex;
+        gap: 48px;
+        flex-wrap: wrap; /* em telas menores quebra linha */
+      }
+
+      .habilidades-colunas div {
+        flex: 1;
+        min-width: 140px; /* mínimo antes de quebrar */
+      }
+
+      .habilidades-colunas p {
+        font-weight: bold;
+        margin-bottom: 12px;
+        color: var(--cor-texto);
+      }
+
+      
+      .formacao { /* Coluna direita: Formação*/
+        flex: 1; /*diminui e cresce qnd precisa*/
+        padding: 72px 48px;
+        background-color: var(--cor-fundo);
+        border-top: none; /* remove borda que tinha antes */
+      }
+
+      .formacao .titulo-secao {
+        color: var(--cor-vinho);
+      }
+
+      /* Item de formação */
+      .formacao-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .formacao-info h3 {
+        font-family: var(--fonte-titulo);
+        font-size: 1.1rem;
+        color: var(--cor-texto);
+      }
+
+      .formacao-info p {
+        font-size: 0.95rem;
+        color: var(--cor-texto);
+        margin-top: 4px;
+      }
+
+      /*
+       RESPONSIVIDADE em SOBRE e HABILIDADES/FORMAÇÃO
+     */
+      @media (max-width: 759px) {
+        /* Sobre + foto: foto vai abaixo do texto */
+        .sobre-foto-container {
+          flex-direction: column;
+        }
+
+        .sobre-foto {
+          align-self: center;
+        }
+
+        /* Habilidades + formação: empilha */
+        .habilidades-formacao-container {
+          flex-direction: column;
+        }
+
+        /* Formação: período abaixo do título */
+        .formacao-item {
+          flex-direction: column;
+          gap: 4px;
+        }
+      }
+
+      /*TAGS (habilidades e idiomas) */
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .tag {
+        background-color: var(--cor-vinho);
+        color: var(--cor-branco);
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      /* CERTIFICAÇÕES*/
+      .certificacoes {
+        background-color: var(--cor-vinho);
+        
+      }
+
+      .certificacoes .titulo-secao {
+        color: var(--cor-branco);
+      }
+
+      
+      .cert-grid { /* Grid: 2 colunas em telas grandes */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      /* Card de certificação */
+      .card-cert {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.08
+        ); /* branco bem transparente */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 24px;
+
+        /* Flexbox: ícone e foto lado a lado */
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .card-cert h3 {
+        font-family: var(--fonte-titulo);
+        color: var(--cor-branco);
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+
+      .card-cert p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-top: 0;
+      }
+
+      /* Em telas menores que 760px: certificações em coluna única */
+      @media (max-width: 759px) {
+        .cert-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .formacao-item {
+          flex-direction: column; /* período vai abaixo do título */
+          gap: 4px;
+        }
+      }
+
+      /* PROJETOS */
+      .projetos {
+        border-top: 2px solid var(--cor-vinho);
+      }
+
+      .projetos-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 colunas */
+        gap: 24px;
+      }
+
+      /* Card de projeto */
+      .card-projeto {
+        background-color: var(--cor-vinho);
+        border-radius: 8px;
+        padding: 24px;
+        min-height: 160px;
+
+        /* Flexbox para organizar conteúdo interno */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        transition: opacity 0.2s;
+      }
+
+      .card-projeto:hover {
+        opacity: 0.85;
+      }
+
+      .proj-links{
+        text-decoration: none;
+      }
+
+      .card-projeto h3 {
+        font-family: var(--fonte-titulo);
+        color: var(--cor-branco);
+        font-size: 1.1rem;
+      }
+
+      .card-projeto img{
+        border-radius: 8px;
+      }
+
+      .card-projeto p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.85rem;
+        margin-top: 6px;
+      }
+
+      /* Em telas menores que 760px: projetos em coluna única */
+      @media (max-width: 759px) {
+        .projetos-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+
+      /* CONTATO*/
+      .contato {
+        background-color: var(--cor-vinho);
+      }
+
+      .contato .titulo-secao {
+        color: var(--cor-branco);
+      }
+
+      .contato p {
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 480px;
+        line-height: 1.7; /*distancia entre as linhas*/
+        margin-bottom: 24px;
+      }
+
+      .contato a.btn-contato {
+        
+        background-color: var(--cor-branco);
+        color: var(--cor-vinho);
+        font-weight: bold;
+        font-family: var(--fonte-titulo);
+        padding: 12px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+
+      .contato a.btn-contato:hover {
+        opacity: 0.85;
+      }
