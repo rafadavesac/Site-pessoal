@@ -57,12 +57,9 @@
       }
 
       @media (max-width: 570px) {
-        nav{
-          justify-content: space-around;
-        }
-        nav a{
-          margin-left: 2px;
-          padding: 5px 5px;
+
+        nav a {
+          display: none; /*tira os links*/
         }
       }
 
