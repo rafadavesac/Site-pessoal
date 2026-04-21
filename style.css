@@ -129,15 +129,23 @@
       /*==============================================*/
       /* SOBRE e FOTO */
 
-      .sobre {
-        padding: 0; /* o padding já está no container pai */
-        flex: 1; /* ocupa o espaço restante */
+      .sobre-foto-container {
+        display: flex;
+        align-items: center;
+        gap: 48px; /* espaço entre texto e foto */
+        padding: 72px 48px;
       }
 
-      .sobre p {
+      #sobre {
+        padding: 0; /* o padding já está no container pai */
+        /* ocupa o espaço restante */
+      }
+
+      #sobre p {
         font-size: 1rem;
         line-height: 1.8;
-        color: #333;
+        color: var(--cor-texto);
+        text-align: justify;
       }
 
       /* Foto dentro da seção sobre */
@@ -148,17 +156,10 @@
       .sobre-foto img {
         width: 220px;
         height: 260px;
-        object-fit: cover;
         border-radius: 8px;
-        display: block;
+        
       }
 
-      .sobre-foto-container {
-        display: flex;
-        align-items: center;
-        gap: 48px; /* espaço entre texto e foto */
-        padding: 72px 48px;
-      }
 
       @media (max-width: 759px) {
         /* Sobre + foto: foto vai abaixo do texto */
@@ -179,7 +180,7 @@
       }
 
       /* Coluna esquerda - habilidades */
-      .habilidades {
+      #habilidades {
         flex: 1; /*diminui e cresce se precisar*/
         padding: 72px 48px;
         background-color: var(--cor-fundo);
@@ -323,13 +324,8 @@
         }
 
         .card-cert{
-          flex: 1;
-          flex-wrap: wrap;
-        }
-
-        .formacao-item {
-          flex-direction: column; /* período vai abaixo do título */
-          gap: 4px;
+          flex-wrap: wrap; /* permite que cert-img quebre pra baixo */
+          justify-content: center;
         }
       }
 
@@ -401,22 +397,22 @@
 
       /*==============================================*/
       /* CONTATO*/
-      .contato {
+      #contato {
         background-color: var(--cor-vinho);
       }
 
-      .contato .titulo-secao {
+      #contato .titulo-secao {
         color: var(--cor-branco);
       }
 
-      .contato p {
+      #contato p {
         color: rgba(255, 255, 255, 0.8);
         max-width: 480px;
         line-height: 1.7; /*distancia entre as linhas*/
         margin-bottom: 24px;
       }
 
-      .contato a.btn-contato {
+      #contato a.btn-contato {
         
         background-color: var(--cor-branco);
         color: var(--cor-vinho);
@@ -428,6 +424,6 @@
         transition: opacity 0.2s;
       }
 
-      .contato a.btn-contato:hover {
+      #contato a.btn-contato:hover {
         opacity: 0.85;
       }
