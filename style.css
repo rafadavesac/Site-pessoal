@@ -5,7 +5,7 @@
         --cor-fundo: #f0eae8; /* fundo das seções claras */
         --cor-texto: #1a1a1a; /* texto principal */
         --cor-branco: #ffffff;
-        --fonte-titulo: "Syne", sans-serif;
+        --fonte-titulo: "Outfit", sans-serif;
         --fonte-corpo: "DM Sans", sans-serif;
       }
 
@@ -125,8 +125,9 @@
         margin-bottom: 32px;
       }
 
+
+      /*==============================================*/
       /* SOBRE e FOTO */
-      
 
       .sobre {
         padding: 0; /* o padding já está no container pai */
@@ -159,6 +160,18 @@
         padding: 72px 48px;
       }
 
+      @media (max-width: 759px) {
+        /* Sobre + foto: foto vai abaixo do texto */
+        .sobre-foto-container {
+          flex-direction: column;
+        }
+
+        .sobre-foto {
+          align-self: center;
+        }
+      }
+
+      /*==============================================*/
       /* HABILIDADES e FORMAÇÃO (lado a lado)*/
       .habilidades-formacao-container {
         display: flex;
@@ -224,27 +237,13 @@
       }
 
       /*
-       RESPONSIVIDADE em SOBRE e HABILIDADES/FORMAÇÃO
+       RESPONSIVIDADE em HABILIDADES/FORMAÇÃO
      */
       @media (max-width: 759px) {
-        /* Sobre + foto: foto vai abaixo do texto */
-        .sobre-foto-container {
-          flex-direction: column;
-        }
-
-        .sobre-foto {
-          align-self: center;
-        }
-
+        
         /* Habilidades + formação: empilha */
         .habilidades-formacao-container {
           flex-direction: column;
-        }
-
-        /* Formação: período abaixo do título */
-        .formacao-item {
-          flex-direction: column;
-          gap: 4px;
         }
       }
 
@@ -265,6 +264,8 @@
         font-weight: 500;
       }
 
+
+      /*==============================================*/
       /* CERTIFICAÇÕES*/
       .certificacoes {
         background-color: var(--cor-vinho);
@@ -321,12 +322,19 @@
           grid-template-columns: 1fr;
         }
 
+        .card-cert{
+          flex: 1;
+          flex-wrap: wrap;
+        }
+
         .formacao-item {
           flex-direction: column; /* período vai abaixo do título */
           gap: 4px;
         }
       }
 
+
+      /*==============================================*/
       /* PROJETOS */
       .projetos {
         border-top: 2px solid var(--cor-vinho);
@@ -382,9 +390,16 @@
         .projetos-grid {
           grid-template-columns: 1fr;
         }
+
+        .card-projeto {
+          
+          flex-direction: column;
+        }
       }
 
 
+
+      /*==============================================*/
       /* CONTATO*/
       .contato {
         background-color: var(--cor-vinho);
