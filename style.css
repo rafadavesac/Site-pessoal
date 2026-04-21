@@ -409,18 +409,4 @@
         margin-bottom: 24px;
       }
 
-      #contato a.btn-contato {
-        
-        background-color: var(--cor-branco);
-        color: var(--cor-vinho);
-        font-weight: bold;
-        font-family: var(--fonte-titulo);
-        padding: 12px 28px;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: opacity 0.2s;
-      }
-
-      #contato a.btn-contato:hover {
-        opacity: 0.85;
-      }
+      
