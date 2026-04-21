@@ -1,1 +1,1 @@
-Site publicado em <a href="https://rafadavesac.github.io/Site-pessoal/">Acessar site</a>
+Acesso para o site: <a href="https://rafadavesac.github.io/Site-pessoal/" target="_blank">Site Pessoal</a>
