@@ -28,16 +28,10 @@
         padding: 16px 48px;
 
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
       }
 
-      nav .logo {
-        color: var(--cor-branco);
-        font-family: var(--fonte-titulo);
-        font-size: 1rem;
-        font-weight: 700;
-      }
 
       nav a {
         color: var(--cor-branco);
@@ -56,11 +50,12 @@
         transition: background-color 0.2s; /*deixa a transição mais smooth*/
       }
 
-      @media (max-width: 570px) {
+      @media (max-width: 410px) {
 
-        nav a {
+        nav a{
           display: none; /*tira os links*/
         }
+        
       }
 
       /* HERO  */
