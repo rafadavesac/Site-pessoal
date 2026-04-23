@@ -52,8 +52,8 @@
 
       @media (max-width: 410px) {
 
-        nav a{
-          display: none; /*tira os links*/
+        nav .nav-link-habilidades{
+          display: none; /*tira o link*/
         }
         
       }
