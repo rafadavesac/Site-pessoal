@@ -68,14 +68,21 @@
         align-items: center;
       }
 
-      
-
       .hero-texto h1 {
         font-family: var(--fonte-titulo);
         font-size: 3rem;
         color: var(--cor-branco);
         line-height: 1.1;
       }
+
+      .hero-texto h3{
+        display: flex;
+        color: var(--cor-branco);
+        font-weight: 500;
+        font-size: 1.4rem;
+        margin-top: 16px;
+      }
+
 
       .hero-texto p {
         display: flex;
